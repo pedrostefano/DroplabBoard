@@ -7,6 +7,7 @@ import { BoardComponent } from './board/board.component';
 import { LineComponent } from './line/line.component';
 import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { MaterialModule } from './material.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
+    MaterialModule,
     BrowserModule
   ],
   providers: [],
