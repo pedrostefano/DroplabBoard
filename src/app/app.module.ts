@@ -8,6 +8,8 @@ import { LineComponent } from './line/line.component';
 import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { MaterialModule } from './material.module';
+import { WelcomeComponent } from './welcome/welcome.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import { MaterialModule } from './material.module';
     BoardComponent,
     LineComponent,
     CardComponent,
-    NavbarComponent
+    NavbarComponent,
+    WelcomeComponent
   ],
   imports: [
     MaterialModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
