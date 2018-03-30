@@ -1,0 +1,41 @@
+<section class="signup-form" fxLayout fxLayoutAlign="center center" >
+  <mat-card class="signup-card" fxFlex.xs="100%" fxFlex="400px" >
+
+    <form fxLayout="column" fxLayoutGap=10px #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-form-field>
+        <input
+          type="email"
+          matInput
+          placeholder="Your email">
+      </mat-form-field>
+
+      <mat-form-field hintLabel="Should be at least 6 characters long">
+        <input type="password"
+               matInput
+               placeholder="Your password">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Your birthdate"
+          [matDatepicker]="picker">
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker">
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-checkbox
+        name="agree"
+        required
+        color="primary">Agree to Terms and Conditios.
+      </mat-checkbox>
+
+
+      <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">Submit</button>
+
+    </form>
+  </mat-card>
+</section>

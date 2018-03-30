@@ -1,30 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from './material.module';
 
+import { AppRoutingModule} from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
+import { BoardsModule } from './boards/boards.module';
 
 import { AppComponent } from './app.component';
-import { BoardComponent } from './board/board.component';
-import { LineComponent } from './line/line.component';
-import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-import { MaterialModule } from './material.module';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { SidenavComponent } from './layout/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponent,
-    LineComponent,
-    CardComponent,
     NavbarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SidenavComponent
   ],
   imports: [
-    MaterialModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    SharedModule,
+    AuthModule,
+    BoardsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
