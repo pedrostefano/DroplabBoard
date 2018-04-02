@@ -1,4 +1,18 @@
-.content {
-  padding: 20px;
-  padding-top: 90px;
+.app-sidenav-container {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex: 1;
 }
+.app-sidenav {
+  width: 150px;
+}
+
+.app-content {
+  padding: 20px;
+}
+
+
+
